@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const Telegraf = require('telegraf');
+const { Telegraf } = require('telegraf')
 const OpenAI = require('openai-api');
 const whitelist = process.env.BOT_WHITELIST.split(',');
 const API_KEYS = {};
