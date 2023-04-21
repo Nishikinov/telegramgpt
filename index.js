@@ -9,7 +9,7 @@ whitelist.forEach((user) => {
   API_KEYS[user] = process.env[`API_KEY_${user}`];
 });
 
-const openai = new OpenAI(process.env.OPENAI_API_KEY);
+const openai = new OpenAI(API_KEYS[0]);
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
